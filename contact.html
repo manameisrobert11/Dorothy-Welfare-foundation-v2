@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dorothy Kabula Welfare Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- HEADER (same) -->
+  <header class="topbar"><div class="topbar__inner">
+    <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
+    <nav class="pillnav" aria-label="Primary navigation">
+      <a class="pillnav__pill" href="./about.html">About</a>
+      <a class="pillnav__pill" href="./programmes.html">Programmes</a>
+      <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
+      <a class="pillnav__pill" href="./impact.html">Impact</a>
+      <a class="pillnav__pill" href="./news.html">News</a>
+      <a class="pillnav__pill" href="./contact.html">Contact</a>
+    </nav>
+    <div class="topbar__search" role="search">
+      <span class="topbar__searchIcon" aria-hidden="true">⌕</span>
+      <input class="topbar__searchInput" id="siteSearch" type="search" placeholder="Search programmes, updates…" aria-label="Search the site" />
+      <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search">→</button>
+    </div>
+  </div></header>
+
+  <main class="page">
+    <section class="pageHero pageHero--contact">
+      <div class="pageHero__inner">
+        <p class="pageHero__kicker">Contact</p>
+        <h1 class="pageHero__title">Official contact channels.</h1>
+        <p class="pageHero__lead">Dorothy Kabula Welfare Foundation — Zambezi Region, Republic of Namibia.</p>
+      </div>
+    </section>
+
+    <section class="wbSection">
+      <div class="wbWrap">
+        <div class="contactSplit">
+          <article class="wbCard">
+            <h3 class="wbH3">Emails</h3>
+            <ul class="wbList">
+              <li><strong>General:</strong> info@dkfoundation.org</li>
+              <li><strong>Partnerships:</strong> partnerships@dkfoundation.org</li>
+              <li><strong>Donations:</strong> support@dkfoundation.org</li>
+              <li><strong>Administration:</strong> admin@dkfoundation.org</li>
+            </ul>
+            <small class="wbFine">Emails can be configured to official domain upon deployment.</small>
+          </article>
+
+          <article class="wbCard">
+            <h3 class="wbH3">Send a message</h3>
+            <form class="wbForm" id="contactForm">
+              <input class="wbInput" name="name" placeholder="Full name" required />
+              <input class="wbInput" name="email" placeholder="Email address" type="email" required />
+              <select class="wbInput" name="topic">
+                <option>Partnership</option>
+                <option>Programmes</option>
+                <option>Donations</option>
+                <option>Media / News</option>
+                <option>Other</option>
+              </select>
+              <textarea class="wbInput wbTextarea" name="message" placeholder="Your message..." required></textarea>
+              <button class="wbBtn" type="submit">Submit</button>
+              <small class="wbFine" id="contactStatus"></small>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wbFooter" role="contentinfo">
+  <div class="wbFooter__inner">
+    <div class="wbFooter__cols">
+      <div class="wbFooter__col">
+        <h3 class="wbFooter__brand">Dorothy Kabula Welfare Foundation</h3>
+        <p class="wbFooter__text">Uniting the Zambezi Region for Inclusive Social and Economic Development.</p>
+      </div>
+
+      <div class="wbFooter__col">
+        <h4 class="wbFooter__heading">Quick Links</h4>
+        <ul class="wbFooter__links">
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./programmes.html">Programmes</a></li>
+          <li><a href="./partnerships.html">Partnerships</a></li>
+          <li><a href="./impact.html">Impact</a></li>
+          <li><a href="./news.html">News</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./donate.html">Donate</a></li>
+        </ul>
+      </div>
+
+      <div class="wbFooter__col">
+        <h4 class="wbFooter__heading">Governance &amp; Compliance</h4>
+        <p class="wbFooter__text">Governance, legal, and compliance information (placeholder).</p>
+        <p class="wbFooter__text">Donation and partnership links (placeholder).</p>
+      </div>
+    </div>
+
+    <div class="wbFooter__divider"></div>
+    <div class="wbFooter__bottom">
+      <small>Copyright © <span id="year"></span> Dorothy Kabula Welfare Foundation</small>
+    </div>
+  </div>
+</footer>
+
+  <script src="./site.js"></script>
+  <script>
+    const cf=document.getElementById("contactForm");
+    const cs=document.getElementById("contactStatus");
+    cf?.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      if(cs) cs.textContent="Thanks — we received your message (placeholder).";
+      cf.reset();
+      setTimeout(()=>{ if(cs) cs.textContent=""; }, 3000);
+    });
+  </script>
+</body>
+</html>
