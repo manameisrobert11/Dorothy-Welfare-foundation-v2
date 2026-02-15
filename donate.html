@@ -17,6 +17,7 @@
       <a class="pillnav__pill" href="./impact.html">Impact</a>
       <a class="pillnav__pill" href="./news.html">News</a>
       <a class="pillnav__pill" href="./contact.html">Contact</a>
+      <a class="pillnav__pill is-active" href="./donate.html" aria-current="page">Donate</a>
     </nav>
     <div class="topbar__search" role="search">
       <span class="topbar__searchIcon" aria-hidden="true">⌕</span>
@@ -30,16 +31,58 @@
       <div class="pageHero__inner">
         <p class="pageHero__kicker">Donate</p>
         <h1 class="pageHero__title">Support our programmes.</h1>
-        <p class="pageHero__lead">Choose how you’d like to contribute. (Payment setup placeholder for now.)</p>
+        <p class="pageHero__lead">Make a once-off contribution securely via PayToday, or reach out for banking/partnership options.</p>
       </div>
     </section>
 
     <section class="wbSection">
       <div class="wbWrap">
         <div class="donateGrid">
+
+          <!-- NEW: PayToday Donation Card -->
+          <article class="donateCard">
+            <h3>Donate with PayToday</h3>
+            <p>Choose an amount and complete your donation in a secure PayToday checkout.</p>
+
+            <form id="paytodayDonateForm" class="donateForm" novalidate>
+              <label class="donateForm__label">
+                Amount (NAD)
+                <input class="donateForm__input" id="donAmount" type="number" min="10" step="1" value="200" required />
+              </label>
+
+              <div class="donateForm__row2">
+                <label class="donateForm__label">
+                  First name
+                  <input class="donateForm__input" id="donFirst" type="text" autocomplete="given-name" required />
+                </label>
+                <label class="donateForm__label">
+                  Last name
+                  <input class="donateForm__input" id="donLast" type="text" autocomplete="family-name" required />
+                </label>
+              </div>
+
+              <label class="donateForm__label">
+                Email
+                <input class="donateForm__input" id="donEmail" type="email" autocomplete="email" required />
+              </label>
+
+              <label class="donateForm__label">
+                Phone
+                <input class="donateForm__input" id="donPhone" type="tel" autocomplete="tel" required />
+              </label>
+
+              <button class="wbBtn" id="donatePayTodayBtn" type="submit">Donate now</button>
+              <p class="donateForm__status" id="donateStatus" aria-live="polite"></p>
+            </form>
+
+            <p class="donateFineprint">
+              If you experience issues, please <a href="./contact.html">contact us</a> and we’ll assist.
+            </p>
+          </article>
+
           <article class="donateCard">
             <h3>Bank Transfer</h3>
-            <p>Add official bank details here (placeholder).</p>
+            <p>Prefer a direct transfer? Request our official banking details.</p>
             <a class="wbBtn" href="./contact.html">Request details</a>
           </article>
 
@@ -54,46 +97,119 @@
             <p>Fund larger initiatives with reporting and measurable outcomes.</p>
             <a class="wbBtn" href="./partnerships.html">Partner with us</a>
           </article>
+
         </div>
       </div>
     </section>
   </main>
 
   <footer class="wbFooter" role="contentinfo">
-  <div class="wbFooter__inner">
-    <div class="wbFooter__cols">
-      <div class="wbFooter__col">
-        <h3 class="wbFooter__brand">Dorothy Kabula Welfare Foundation</h3>
-        <p class="wbFooter__text">Uniting the Zambezi Region for Inclusive Social and Economic Development.</p>
+    <div class="wbFooter__inner">
+      <div class="wbFooter__cols">
+        <div class="wbFooter__col">
+          <h3 class="wbFooter__brand">Dorothy Kabula Welfare Foundation</h3>
+          <p class="wbFooter__text">Uniting the Zambezi Region for Inclusive Social and Economic Development.</p>
+        </div>
+
+        <div class="wbFooter__col">
+          <h4 class="wbFooter__heading">Quick Links</h4>
+          <ul class="wbFooter__links">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./programmes.html">Programmes</a></li>
+            <li><a href="./partnerships.html">Partnerships</a></li>
+            <li><a href="./impact.html">Impact</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+          </ul>
+        </div>
+
+        <div class="wbFooter__col">
+          <h4 class="wbFooter__heading">Governance &amp; Compliance</h4>
+          <p class="wbFooter__text">Governance, legal, and compliance information (placeholder).</p>
+          <p class="wbFooter__text">Donation and partnership links (placeholder).</p>
+        </div>
       </div>
 
-      <div class="wbFooter__col">
-        <h4 class="wbFooter__heading">Quick Links</h4>
-        <ul class="wbFooter__links">
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./programmes.html">Programmes</a></li>
-          <li><a href="./partnerships.html">Partnerships</a></li>
-          <li><a href="./impact.html">Impact</a></li>
-          <li><a href="./news.html">News</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./donate.html">Donate</a></li>
-        </ul>
-      </div>
-
-      <div class="wbFooter__col">
-        <h4 class="wbFooter__heading">Governance &amp; Compliance</h4>
-        <p class="wbFooter__text">Governance, legal, and compliance information (placeholder).</p>
-        <p class="wbFooter__text">Donation and partnership links (placeholder).</p>
+      <div class="wbFooter__divider"></div>
+      <div class="wbFooter__bottom">
+        <small>Copyright © <span id="year"></span> Dorothy Kabula Welfare Foundation</small>
       </div>
     </div>
+  </footer>
 
-    <div class="wbFooter__divider"></div>
-    <div class="wbFooter__bottom">
-      <small>Copyright © <span id="year"></span> Dorothy Kabula Welfare Foundation</small>
-    </div>
-  </div>
-</footer>
-
+  <!-- PayToday SDK (per their web integration guide) -->
+  <script src="https://nedbankstorage.blob.core.windows.net/nedbankclouddatadisk/staticazure/web/sdk/paytoday-sdk.js"></script>
   <script src="./site.js"></script>
+
+  <script>
+    // PayToday docs: uses a 3-key system (Shop Key, Shop Handle, Private Key) to create payment intents. :contentReference[oaicite:1]{index=1}
+    // IMPORTANT: PayToday also warns keys should not be exposed client-side. Consider moving this to a server function if possible. :contentReference[oaicite:2]{index=2}
+
+    const PAYTODAY = {
+      shopKey: "YOUR_SHOP_KEY",
+      shopHandle: "YOUR_SHOP_HANDLE",
+      privateKey: "YOUR_PRIVATE_KEY",
+      environment: "production"
+    };
+
+    const form = document.getElementById("paytodayDonateForm");
+    const statusEl = document.getElementById("donateStatus");
+    const btn = document.getElementById("donatePayTodayBtn");
+
+    function setStatus(msg) { statusEl.textContent = msg || ""; }
+
+    function invoice() {
+      return "DKF-" + Date.now();
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // basic client validation
+      const amountNAD = Number(document.getElementById("donAmount").value);
+      const first = document.getElementById("donFirst").value.trim();
+      const last = document.getElementById("donLast").value.trim();
+      const email = document.getElementById("donEmail").value.trim();
+      const phone = document.getElementById("donPhone").value.trim();
+
+      if (!amountNAD || amountNAD < 10 || !first || !last || !email || !phone) {
+        setStatus("Please complete all fields (minimum NAD 10).");
+        return;
+      }
+
+      btn.disabled = true;
+      setStatus("Redirecting to PayToday checkout…");
+
+      try {
+        const paytoday = new PayToday(PAYTODAY);
+
+        const ok = await paytoday.initialize();
+        if (!ok) throw new Error("PayToday initialization failed");
+
+        // NOTE: Amount unit depends on your PayToday setup.
+        // Many gateways use cents; PayToday guide examples show integer amounts without clarifying cents.
+        // Start with whole NAD here; if PayToday expects cents, change to: Math.round(amountNAD * 100).
+        const amount = Math.round(amountNAD);
+
+        const intent = await paytoday.createPaymentIntent({
+          amount,
+          invoice_number: invoice(),
+          user_first_name: first,
+          user_last_name: last,
+          user_email: email,
+          user_phone_number: phone,
+          return_url: window.location.origin + "/donate-thanks.html"
+        });
+
+        // PayToday flow: redirect user to payment_url returned from createPaymentIntent. :contentReference[oaicite:3]{index=3}
+        window.location.href = intent.data.payment_url;
+      } catch (err) {
+        console.error(err);
+        setStatus("Could not start PayToday checkout. Please try again.");
+        btn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
