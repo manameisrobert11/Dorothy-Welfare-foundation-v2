@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Dorothy Kabula Welfare Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="pageHero pageHero--donate">
+      <div class="pageHero__inner">
+        <p class="pageHero__kicker">Donation</p>
+        <h1 class="pageHero__title">Thank you.</h1>
+        <p class="pageHero__lead" id="msg">We’re processing your return from PayToday.</p>
+        <a class="wbBtn" href="./index.html">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // PayToday returns to your configured Return URL after checkout. :contentReference[oaicite:4]{index=4}
+    const p = new URLSearchParams(location.search);
+    const status = (p.get("status") || "").toLowerCase();
+    const msg = document.getElementById("msg");
+
+    if (status === "success") msg.textContent = "Payment successful. We appreciate your support.";
+    else if (status === "failed" || status === "cancelled") msg.textContent = "Payment was not completed. You can try again anytime.";
+    else msg.textContent = "If your payment completed, thank you. If not, please return and try again.";
+  </script>
+</body>
+</html>
