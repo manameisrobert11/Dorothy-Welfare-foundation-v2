@@ -11,7 +11,11 @@
   <!-- paste shared header here -->
   <header class="topbar"><div class="topbar__inner">
     <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
-    <nav class="pillnav" aria-label="Primary navigation">
+    
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuBtn__lines" aria-hidden="true"></span>
+      </button>
+<nav class="pillnav" aria-label="Primary navigation">
       <a class="pillnav__pill" href="./about.html">About</a>
       <a class="pillnav__pill" href="./programmes.html">Programmes</a>
       <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
@@ -25,6 +29,33 @@
       <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search">→</button>
     </div>
   </div></header>
+
+  <!-- MOBILE MENU (UNICEF-style drawer) -->
+  <div class="mnav" id="mobileMenu" aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mnav__top">
+        <span class="mnav__brand">Dorothy Kabula Welfare Foundation</span>
+        <button class="mnav__close" id="menuClose" type="button" aria-label="Close menu">×</button>
+      </div>
+
+      <nav class="mnav__links" aria-label="Mobile navigation">
+      <a class="mnav__link" href="./index.html">Home</a>
+      <a class="mnav__link" href="./about.html">About</a>
+      <a class="mnav__link" href="./programmes.html">Programmes</a>
+      <a class="mnav__link" href="./partnerships.html">Partnerships</a>
+      <a class="mnav__link" href="./impact.html">Impact</a>
+      <a class="mnav__link" href="./news.html">News</a>
+      <a class="mnav__link" href="./contact.html">Contact</a>
+      <a class="mnav__link" href="./donate.html">Donate</a>
+      </nav>
+
+      <div class="mnav__search" role="search" aria-label="Search the site">
+        <span class="mnav__searchIcon" aria-hidden="true">⌕</span>
+        <input class="mnav__searchInput" id="siteSearchMobile" type="search" placeholder="Search programmes, updates…" />
+        <button class="mnav__searchBtn" id="siteSearchBtnMobile" type="button" aria-label="Search">→</button>
+      </div>
+    </div>
+  </div>
 
   <main class="page">
     <section class="pageHero pageHero--about">
@@ -60,26 +91,16 @@
   </main>
 
   <!-- FOOTER -->
- <footer class="wbFooter">
+  <footer class="wbFooter" role="contentinfo">
   <div class="wbFooter__inner">
-
     <div class="wbFooter__cols">
-
-      <!-- Column 1: About -->
-      <div>
-        <h2 class="wbFooter__brand">
-          Dorothy Kabula Welfare Foundation
-        </h2>
-        <p class="wbFooter__text">
-          A registered Namibian non-profit organisation committed to inclusive
-          social and economic development across the Zambezi Region through
-          community empowerment, entrepreneurship, agriculture, and strategic partnerships.
-        </p>
+      <div class="wbFooter__col">
+        <h3 class="wbFooter__brand">Dorothy Kabula Welfare Foundation</h3>
+        <p class="wbFooter__text">Uniting the Zambezi Region for Inclusive Social and Economic Development.</p>
       </div>
 
-      <!-- Column 2: Quick Links -->
-      <div>
-        <h3 class="wbFooter__heading">Quick Links</h3>
+      <div class="wbFooter__col">
+        <h4 class="wbFooter__heading">Quick Links</h4>
         <ul class="wbFooter__links">
           <li><a href="./about.html">About</a></li>
           <li><a href="./programmes.html">Programmes</a></li>
@@ -91,30 +112,21 @@
         </ul>
       </div>
 
-      <!-- Column 3: Contact -->
-      <div>
-        <h3 class="wbFooter__heading">Contact</h3>
-        <ul class="wbFooter__links">
-          <li>Zambezi Region, Namibia</li>
-          <li>Email: info@dorothykabulafoundation.org</li>
-          <li>Phone: +264 XX XXX XXXX</li>
-        </ul>
+      <div class="wbFooter__col">
+        <h4 class="wbFooter__heading">Governance &amp; Compliance</h4>
+        <p class="wbFooter__text">Governance, legal, and compliance information (placeholder).</p>
+        <p class="wbFooter__text">Donation and partnership links (placeholder).</p>
       </div>
-
     </div>
 
     <div class="wbFooter__divider"></div>
-
     <div class="wbFooter__bottom">
-      © <span id="year"></span> Dorothy Kabula Welfare Foundation. All rights reserved.
+      <small>Copyright © <span id="year"></span> Dorothy Kabula Welfare Foundation</small>
     </div>
-
   </div>
 </footer>
-
 
 
   <script src="./site.js"></script>
 </body>
 </html>
-
