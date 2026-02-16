@@ -10,7 +10,11 @@
   <!-- HEADER (same) -->
   <header class="topbar"><div class="topbar__inner">
     <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
-    <nav class="pillnav" aria-label="Primary navigation">
+    
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuBtn__lines" aria-hidden="true"></span>
+      </button>
+<nav class="pillnav" aria-label="Primary navigation">
       <a class="pillnav__pill" href="./about.html">About</a>
       <a class="pillnav__pill" href="./programmes.html">Programmes</a>
       <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
@@ -24,6 +28,33 @@
       <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search">→</button>
     </div>
   </div></header>
+
+  <!-- MOBILE MENU (UNICEF-style drawer) -->
+  <div class="mnav" id="mobileMenu" aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mnav__top">
+        <span class="mnav__brand">Dorothy Kabula Welfare Foundation</span>
+        <button class="mnav__close" id="menuClose" type="button" aria-label="Close menu">×</button>
+      </div>
+
+      <nav class="mnav__links" aria-label="Mobile navigation">
+      <a class="mnav__link" href="./index.html">Home</a>
+      <a class="mnav__link" href="./about.html">About</a>
+      <a class="mnav__link" href="./programmes.html">Programmes</a>
+      <a class="mnav__link" href="./partnerships.html">Partnerships</a>
+      <a class="mnav__link" href="./impact.html">Impact</a>
+      <a class="mnav__link" href="./news.html">News</a>
+      <a class="mnav__link" href="./contact.html">Contact</a>
+      <a class="mnav__link" href="./donate.html">Donate</a>
+      </nav>
+
+      <div class="mnav__search" role="search" aria-label="Search the site">
+        <span class="mnav__searchIcon" aria-hidden="true">⌕</span>
+        <input class="mnav__searchInput" id="siteSearchMobile" type="search" placeholder="Search programmes, updates…" />
+        <button class="mnav__searchBtn" id="siteSearchBtnMobile" type="button" aria-label="Search">→</button>
+      </div>
+    </div>
+  </div>
 
   <main class="page">
     <section class="pageHero pageHero--programmes">
