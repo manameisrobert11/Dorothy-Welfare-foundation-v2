@@ -468,92 +468,102 @@ a{ color:inherit; text-decoration:none }
 /* =========================
    World Bank CTA
    ========================= */
-.wbcta{
-  padding: 30px 70px 80px;
-  position: relative;
+/* =========================
+   World Bank–Serious Footer
+   ========================= */
+
+.wbFooter{
+  background: #071c2b;
+  color: rgba(255,255,255,.82);
+  padding: 60px 70px 30px;
+  font-size: 14px; /* smaller institutional font */
 }
-.wbcta__title{
-  font-size: 58px;
-  margin: 40px 0 26px;
-  color: var(--footer);
-  font-weight: 900;
-  letter-spacing: -0.5px;
+
+.wbFooter__inner{
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.wbcta__grid{
+
+.wbFooter__top{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  grid-template-columns: 1.4fr .8fr .8fr .9fr;
+  gap: 50px;
 }
-.wbctaCard{
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 18px 38px rgba(0,0,0,.12);
-  background: #0b0f14;
-  position: relative;
-  min-height: 360px;
-}
-.wbctaCard__link{ display:block; height: 100%; position: relative; }
-.wbctaCard__media{
-  position:absolute; inset:0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
-  transition: transform .9s cubic-bezier(.22,1,.36,1);
-  will-change: transform;
-}
-.wbctaCard__shade{
-  position:absolute; inset:0;
-  background: linear-gradient(rgba(0,0,0,.02) 35%, rgba(0,0,0,.78) 100%);
-  transition: opacity .6s cubic-bezier(.22,1,.36,1);
-  opacity: 1;
-}
-.wbctaCard__content{
-  position:absolute;
-  left: 22px; right: 22px; bottom: 20px;
-  color:#fff;
-  transform: translateY(0);
-  transition: transform .6s cubic-bezier(.22,1,.36,1);
-}
-.wbctaCard__title{
-  margin: 0 0 10px;
-  font-size: 30px;
-  line-height: 1.05;
-  font-weight: 900;
-  letter-spacing: -0.2px;
-}
-.wbctaCard__desc{
+
+.wbFooter__brand{
   margin: 0 0 14px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(255,255,255,.88);
-  max-width: 52ch;
-}
-.wbctaCard__learn{
-  display:inline-block;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .4px;
   color: #fff;
-  padding-bottom: 4px;
-  border-bottom: 2px solid rgba(255,255,255,.65);
-  transition: border-color .25s ease, transform .25s ease;
 }
-.wbctaCard:hover .wbctaCard__media{ transform: scale(1.08); }
-.wbctaCard:hover .wbctaCard__content{ transform: translateY(-4px); }
-.wbctaCard:hover .wbctaCard__learn{
-  border-bottom-color: rgba(255,255,255,.95);
-  transform: translateY(-1px);
+
+.wbFooter__mission{
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(255,255,255,.65);
+  max-width: 44ch;
 }
-.wbctaCard__link:focus-visible{
-  outline: 3px solid rgba(159,227,214,.85);
-  outline-offset: 4px;
-  border-radius: 28px;
+
+.wbFooter__heading{
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
 }
+
+.wbFooter__links{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.wbFooter__links li{
+  line-height: 1.6;
+  color: rgba(255,255,255,.75);
+}
+
+.wbFooter__links a{
+  color: rgba(255,255,255,.75);
+  transition: color .2s ease;
+}
+
+.wbFooter__links a:hover{
+  color: #ffffff;
+}
+
+.wbFooter__divider{
+  height: 1px;
+  background: rgba(255,255,255,.12);
+  margin: 40px 0 18px;
+}
+
+.wbFooter__bottom{
+  font-size: 12px;
+  color: rgba(255,255,255,.55);
+}
+
+/* Responsive */
 @media (max-width: 1100px){
-  .wbcta{ padding: 30px 18px 70px; }
-  .wbcta__grid{ grid-template-columns: 1fr; }
-  .wbctaCard{ min-height: 340px; }
-  .wbcta__title{ font-size: 46px; }
+  .wbFooter{
+    padding: 50px 20px 25px;
+  }
+  .wbFooter__top{
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
+
+@media (max-width: 720px){
+  .wbFooter__top{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* =========================
    Footer (match screenshot)
@@ -901,76 +911,403 @@ a{ color:inherit; text-decoration:none }
   .topbar__inner{ flex-wrap:wrap; }
   .pillnav{ justify-content:flex-start; flex-wrap:wrap; }
 }
-/* =========================
-   Donate: PayToday form (matches site style)
-   ========================= */
-.donateForm{
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.donateForm__label{
-  display: grid;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 800;
-  color: rgba(7,28,43,.78);
-}
-
-.donateForm__input{
-  width: 100%;
-  height: 44px;
+/* Donate form (PayToday) */
+.donateForm { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+.donateForm__label { display:flex; flex-direction:column; gap:6px; font-size: 13px; }
+.donateForm__input {
+  height: 42px;
   padding: 10px 12px;
+  border: 1px solid var(--line);
   border-radius: 14px;
-  border: 1px solid rgba(0,0,0,.10);
+  background: #fff;
+  font-size: 14px;
+}
+.donateForm__row2 { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+.donateForm__status { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+.donateFineprint { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
+@media (max-width: 640px) {
+  .donateForm__row2 { grid-template-columns: 1fr; }
+}
+
+/* =========================
+   Responsive upgrades (all devices)
+   Append-only overrides so nothing breaks.
+   ========================= */
+
+/* Missing variable used by some blocks */
+:root{ --muted:#566472; }
+
+/* Safer defaults */
+body{ overflow-x:hidden; }
+img{ max-width:100%; height:auto; }
+input, select, textarea, button{ max-width:100%; }
+*, *::before, *::after{ min-width:0; }
+
+/* Fluid typography (desktop → mobile) */
+.hero__title{ font-size: clamp(28px, 4.6vw, 44px); }
+.sectionTitle{ font-size: clamp(34px, 6.2vw, 62px); }
+.wbcta__title{ font-size: clamp(32px, 5.8vw, 58px); }
+.pageHero__title{ font-size: clamp(30px, 4.8vw, 46px); }
+.pageHero__lead{ font-size: clamp(15px, 2.2vw, 18px); }
+
+/* CTA: lock the card-image layout so it doesn't get "messed up" by other responsive rules */
+.wbcta{ padding: 30px clamp(18px, 6vw, 70px) 80px; }
+.wbcta__grid{ display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.wbctaCard{ min-height: 360px; }
+
+/* Sections: consistent side padding on every screen */
+.wbSection{ padding: clamp(44px, 6vw, 70px) clamp(14px, 6vw, 70px); }
+.pageHero{ padding: clamp(34px, 6vw, 54px) clamp(14px, 6vw, 70px) clamp(18px, 4vw, 30px); }
+
+/* Contact page: ensure nothing overflows on narrow screens */
+.contactSplit{ width:100%; }
+.wbCard{ width:100%; }
+.wbForm{ width:100%; }
+
+/* Mid screens: stop header overflow, make search behave */
+@media (max-width: 980px){
+  .topbar{ padding: 16px 18px 8px; }
+  .topbar__inner{ flex-wrap: wrap; gap: 12px; }
+  .topbar__logo{ flex: 0 0 auto; }
+  .pillnav{ justify-content: flex-start; flex-wrap: wrap; gap: 10px; }
+  .pillnav__pill{ font-size: 14px; padding: 9px 14px; }
+
+  .topbar__search{ width: 100%; max-width: 520px; margin-left: 0; order: 3; flex: 1 0 100%; }
+  .hero{ padding: 36px 18px 10px; gap: 22px; }
+  .hero__text{ width: auto; }
+  .hero__right{ justify-content: center; padding-right: 0; }
+  .hero__map{ width: min(520px, 100%); }
+}
+
+/* Small screens: make actions and inputs comfortable */
+@media (max-width: 560px){
+  .topbar__logo{ width: 54px; height: 54px; }
+  .topbar__search{ height: 42px; }
+  .pillnav__pill{ font-size: 13px; padding: 9px 12px; }
+
+  .btn--donate{ width: 100%; }
+  .wbBtn{ width: 100%; }
+
+  .wbSection{ padding: 46px 18px; }
+  .pageHero{ padding: 40px 18px 20px; }
+  .donateCard{ padding: 16px; }
+}
+
+/* Extra small: avoid cramped footer text */
+@media (max-width: 420px){
+  .wbFooter__text, .wbFooter__links a{ font-size: 16px; }
+}
+
+
+
+/* =========================
+   Mobile menu (UNICEF-style)
+   ========================= */
+.menuBtn{
+  display:none;
+  border:0;
+  background: rgba(7,28,43,.92);
+  color:#fff;
+  width: 56px;
+  height: 42px;
+  border-radius: 999px;
+  cursor:pointer;
+  box-shadow: 0 12px 22px rgba(0,0,0,.18);
+  align-items:center;
+  justify-content:center;
+}
+.menuBtn:focus-visible{
+  outline: 3px solid rgba(159,227,214,.85);
+  outline-offset: 3px;
+}
+.menuBtn__lines{
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background:#fff;
+  border-radius: 2px;
+  display:block;
+}
+.menuBtn__lines::before,
+.menuBtn__lines::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:22px;
+  height:2px;
+  background:#fff;
+  border-radius:2px;
+}
+.menuBtn__lines::before{ top:-7px; }
+.menuBtn__lines::after{ top:7px; }
+
+.mnav{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display:none;
+  z-index: 999;
+  padding: 14px;
+}
+.mnav.is-open{ display:block; }
+.mnav__panel{
+  width: min(520px, 100%);
+  margin-left:auto;
+  height: calc(100vh - 28px);
   background: rgba(255,255,255,.96);
-  font: inherit;
-  color: #071c2b;
-  box-shadow: 0 10px 18px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 26px;
+  box-shadow: 0 22px 60px rgba(0,0,0,.22);
+  overflow: hidden;
+
+  transform: translateX(18px);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+  display:flex;
+  flex-direction: column;
+}
+.mnav.is-open .mnav__panel{
+  transform: translateX(0);
+  opacity: 1;
 }
 
-.donateForm__input:focus{
-  outline: none;
-  border-color: rgba(10,111,176,.45);
-  box-shadow:
-    0 10px 18px rgba(0,0,0,.06),
-    0 0 0 4px rgba(10,111,176,.14);
+.mnav__top{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(10,111,176,.10), rgba(255,255,255,0));
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.mnav__brand{
+  font-weight: 950;
+  color:#071c2b;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.mnav__close{
+  width: 44px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: #fff;
+  cursor:pointer;
+  font-size: 22px;
+  line-height: 1;
+  display:grid;
+  place-items:center;
+}
+.mnav__close:focus-visible{
+  outline: 3px solid rgba(159,227,214,.85);
+  outline-offset: 3px;
 }
 
-.donateForm__row2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.mnav__links{
+  padding: 12px 12px 6px;
+  display:grid;
   gap: 10px;
 }
-
-.donateForm__status{
-  margin: 6px 0 0;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(7,28,43,.62);
+.mnav__link{
+  background: rgba(10,111,176,.10);
+  border: 1px solid rgba(10,111,176,.18);
+  border-radius: 16px;
+  padding: 12px 12px;
+  font-weight: 900;
+  color:#071c2b;
+}
+.mnav__link:hover{ background: rgba(10,111,176,.14); }
+.mnav__link.is-active{
+  background: rgba(7,79,128,.92);
+  color:#fff;
+  border-color: rgba(7,79,128,.92);
 }
 
-/* optional: make PayToday card span 2 columns on desktop (looks premium) */
-.donateCard--wide{
-  grid-column: span 2;
+.mnav__search{
+  margin-top: auto;
+  padding: 12px;
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.86);
+}
+.mnav__searchIcon{
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: rgba(7,59,99,.08);
+  color: rgba(7,59,99,.9);
+  font-size: 14px;
+  user-select:none;
+}
+.mnav__searchInput{
+  border:0;
+  outline:0;
+  width:100%;
+  background:transparent;
+  font-size: 14px;
+  color:#071c2b;
+}
+.mnav__searchBtn{
+  width: 44px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(10,111,176,.10);
+  color: rgba(7,59,99,.95);
+  font-weight: 900;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
 }
 
-/* optional: small fineprint under the form */
-.donateFineprint{
-  margin-top: 10px;
-  font-size: 12.5px;
-  color: rgba(7,28,43,.60);
-}
-.donateFineprint a{
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.noScroll{ overflow:hidden; }
+
+/* Mobile header behavior: show burger, hide pills/search */
+@media (max-width: 760px){
+  .topbar{ padding: 14px 14px 8px; }
+  .topbar__inner{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .topbar__logo{ width: 56px; height: 56px; }
+  .pillnav{ display:none; }
+  .topbar__search{ display:none; }
+  .menuBtn{ display:inline-flex; }
 }
 
-/* responsive */
+/* =========================
+   CTA grid fix (restore image blocks)
+   3 → 2 → 1 columns
+   ========================= */
 @media (max-width: 1100px){
-  .donateCard--wide{ grid-column: auto; }
-  .donateForm__row2{ grid-template-columns: 1fr; }
+  .wbcta__grid{ grid-template-columns: repeat(2, 1fr); }
+  .wbctaCard{ min-height: 320px; }
 }
+@media (max-width: 720px){
+  .wbcta__grid{ grid-template-columns: 1fr; }
+}
+/* ===== Mobile fit hardening (prevents overflow) ===== */
+body{ overflow-x:hidden; }
+img{ max-width:100%; height:auto; display:block; }
+input, select, textarea, button{ max-width:100%; }
+*, *::before, *::after{ min-width:0; }
 
+/* Sections: consistent side padding on every screen */
+.wbSection{ padding: clamp(44px, 6vw, 70px) clamp(14px, 6vw, 70px); }
+.pageHero{ padding: clamp(34px, 6vw, 54px) clamp(14px, 6vw, 70px) clamp(18px, 4vw, 30px); }
 
+/* Contact page: ensure nothing overflows on narrow screens */
+.contactSplit, .wbCard, .wbForm{ width:100%; }
+
+/* ===== CTA: lock the image block layout (3 → 2 → 1) ===== */
+.wbcta{ padding: 30px clamp(18px, 6vw, 70px) 80px; }
+.wbcta__grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+.wbctaCard{ min-height: 360px; }
+
+@media (max-width: 1100px){
+  .wbcta__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .wbctaCard{ min-height: 320px; }
+}
+@media (max-width: 720px){
+  .wbcta__grid{ grid-template-columns: 1fr; }
+}
+/* =========================
+   World Bank CTA (RESTORED)
+   ========================= */
+.wbcta{
+  padding: 30px 70px 80px;
+  position: relative;
+}
+.wbcta__title{
+  font-size: 58px;
+  margin: 40px 0 26px;
+  color: var(--footer);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+.wbcta__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+.wbctaCard{
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 18px 38px rgba(0,0,0,.12);
+  background: #0b0f14;
+  position: relative;
+  min-height: 360px;
+}
+.wbctaCard__link{ display:block; height: 100%; position: relative; }
+.wbctaCard__media{
+  position:absolute; inset:0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition: transform .9s cubic-bezier(.22,1,.36,1);
+  will-change: transform;
+}
+.wbctaCard__shade{
+  position:absolute; inset:0;
+  background: linear-gradient(rgba(0,0,0,.02) 35%, rgba(0,0,0,.78) 100%);
+  transition: opacity .6s cubic-bezier(.22,1,.36,1);
+  opacity: 1;
+}
+.wbctaCard__content{
+  position:absolute;
+  left: 22px; right: 22px; bottom: 20px;
+  color:#fff;
+  transform: translateY(0);
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+.wbctaCard__title{
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.wbctaCard__desc{
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255,255,255,.88);
+  max-width: 52ch;
+}
+.wbctaCard__learn{
+  display:inline-block;
+  font-weight: 900;
+  color: #fff;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgba(255,255,255,.65);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.wbctaCard:hover .wbctaCard__media{ transform: scale(1.08); }
+.wbctaCard:hover .wbctaCard__content{ transform: translateY(-4px); }
+.wbctaCard:hover .wbctaCard__learn{
+  border-bottom-color: rgba(255,255,255,.95);
+  transform: translateY(-1px);
+}
+.wbctaCard__link:focus-visible{
+  outline: 3px solid rgba(159,227,214,.85);
+  outline-offset: 4px;
+  border-radius: 28px;
+}
+@media (max-width: 1100px){
+  .wbcta{ padding: 30px 18px 70px; }
+  .wbcta__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wbctaCard{ min-height: 340px; }
+}
+@media (max-width: 720px){
+  .wbcta__grid{ grid-template-columns: 1fr; }
+}
