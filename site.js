@@ -33,3 +33,57 @@ function runSearch() {
 
 searchBtn?.addEventListener("click", runSearch);
 searchInput?.addEventListener("keydown", (e) => { if (e.key === "Enter") runSearch(); });
+
+
+// Mobile menu (drawer)
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const menuClose = document.getElementById("menuClose");
+
+function openMenu(){
+  if (!mobileMenu) return;
+  mobileMenu.classList.add("is-open");
+  mobileMenu.setAttribute("aria-hidden","false");
+  menuBtn?.setAttribute("aria-expanded","true");
+  document.body.classList.add("noScroll");
+}
+function closeMenu(){
+  if (!mobileMenu) return;
+  mobileMenu.classList.remove("is-open");
+  mobileMenu.setAttribute("aria-hidden","true");
+  menuBtn?.setAttribute("aria-expanded","false");
+  document.body.classList.remove("noScroll");
+}
+
+menuBtn?.addEventListener("click", () => {
+  if (mobileMenu?.classList.contains("is-open")) closeMenu();
+  else openMenu();
+});
+menuClose?.addEventListener("click", closeMenu);
+mobileMenu?.addEventListener("click", (e) => {
+  if (e.target === mobileMenu) closeMenu(); // click backdrop
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
+
+// Mobile search hooks (shares same search behavior)
+const searchInputMobile = document.getElementById("siteSearchMobile");
+const searchBtnMobile = document.getElementById("siteSearchBtnMobile");
+searchBtnMobile?.addEventListener("click", runSearchMobile);
+searchInputMobile?.addEventListener("keydown", (e) => { if (e.key === "Enter") runSearchMobile(); });
+
+function runSearchMobile(){
+  const q = (searchInputMobile?.value || "").trim().toLowerCase();
+  if (!q) return;
+  // copy query into desktop search if present (optional)
+  if (searchInput) searchInput.value = q;
+  runSearch();
+  closeMenu();
+}
+
+// Active nav for mobile links too
+document.querySelectorAll(".mnav__link").forEach((a) => {
+  const href = (a.getAttribute("href") || "").split("/").pop()?.toLowerCase();
+  if (href === here) a.classList.add("is-active");
+});
