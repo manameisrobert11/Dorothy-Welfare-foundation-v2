@@ -1,9 +1,9 @@
 const data = [
   { title:"Community Transformation", kicker:"Key Highlight", desc:"Community-driven social and economic transformation in the Zambezi Region.", img:"./assets/highlight1.png", link:"./impact.html" },
-  { title:"Youth & Women Empowerment", kicker:"Key Highlight", desc:"Youth, women, and vulnerable group empowerment programmes.", img:"./assets/highlight2.png", link:"./programmes.html" },
+  { title:"Youth & Women Empowerment", kicker:"Key Highlight", desc:"Youth, women, and vulnerable group empowerment programmes.", img:"./assets/highlight2.jpg", link:"./programmes.html" },
   { title:"Entrepreneurship & Agriculture", kicker:"Key Highlight", desc:"Entrepreneurship, agriculture, and livelihood development initiatives.", img:"./assets/highlight3.png", link:"./programmes.html" },
   { title:"Sports & Culture Support", kicker:"Key Highlight", desc:"Sports, culture, and indigenous community support.", img:"./assets/highlight4.png", link:"./programmes.html" },
-  { title:"Structured Partnerships", kicker:"Key Highlight", desc:"Structured partnership platform for investors, donors, and development agencies.", img:"./assets/highlight5.png", link:"./partnerships.html" }
+  { title:"Structured Partnerships", kicker:"Key Highlight", desc:"Structured partnership platform for investors, donors, and development agencies.", img:"./assets/highlight5.jpg", link:"./partnerships.html" }
 ];
 
 const rail = document.getElementById("prioritiesRail");
