@@ -15,6 +15,7 @@
         <span class="menuBtn__lines" aria-hidden="true"></span>
       </button>
 <nav class="pillnav" aria-label="Primary navigation">
+  <a class="pillnav__pill" href="./index.html">Home</a>
       <a class="pillnav__pill" href="./about.html">About</a>
       <a class="pillnav__pill" href="./programmes.html">Programmes</a>
       <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
@@ -55,51 +56,136 @@
       </div>
     </div>
   </div>
+<main class="page">
+  <!-- Hero (more professional + not repetitive) -->
+  <section class="contactHero">
+    <div class="contactHero__inner">
+      <div class="contactHero__left">
+        <p class="contactHero__kicker">Contact</p>
+        <h1 class="contactHero__title">Let’s work together for measurable community impact.</h1>
+        <p class="contactHero__lead">
+          Dorothy Kabula Welfare Foundation — Zambezi Region, Republic of Namibia.
+          Reach our official channels or send a message directly.
+        </p>
 
-  <main class="page">
-    <section class="pageHero pageHero--contact">
-      <div class="pageHero__inner">
-        <p class="pageHero__kicker">Contact</p>
-        <h1 class="pageHero__title">Official contact channels.</h1>
-        <p class="pageHero__lead">Dorothy Kabula Welfare Foundation — Zambezi Region, Republic of Namibia.</p>
+        <div class="contactHero__chips">
+          <a class="contactChip" href="mailto:info@dkfoundation.org">General Enquiries</a>
+          <a class="contactChip" href="mailto:partnerships@dkfoundation.org">Partnerships</a>
+          <a class="contactChip" href="mailto:support@dkfoundation.org">Donations</a>
+          <a class="contactChip" href="mailto:admin@dkfoundation.org">Administration</a>
+        </div>
       </div>
-    </section>
 
-    <section class="wbSection">
-      <div class="wbWrap">
-        <div class="contactSplit">
-          <article class="wbCard">
-            <h3 class="wbH3">Emails</h3>
-            <ul class="wbList">
-              <li><strong>General:</strong> info@dkfoundation.org</li>
-              <li><strong>Partnerships:</strong> partnerships@dkfoundation.org</li>
-              <li><strong>Donations:</strong> support@dkfoundation.org</li>
-              <li><strong>Administration:</strong> admin@dkfoundation.org</li>
-            </ul>
-            <small class="wbFine">Emails can be configured to official domain upon deployment.</small>
-          </article>
+      <div class="contactHero__right" aria-hidden="true">
+        <div class="contactHero__card">
+          <div class="contactHero__cardTitle">Official Contact Channels</div>
+          <div class="contactHero__cardRow"><strong>Location</strong><span>Zambezi Region, Republic of Namibia</span></div>
+          <div class="contactHero__cardRow"><strong>Email</strong><span>info@dkfoundation.org</span></div>
+          <div class="contactHero__cardHint">We respond as quickly as possible. Thank you for supporting our work.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <article class="wbCard">
-            <h3 class="wbH3">Send a message</h3>
-            <form class="wbForm" id="contactForm">
-              <input class="wbInput" name="name" placeholder="Full name" required />
-              <input class="wbInput" name="email" placeholder="Email address" type="email" required />
-              <select class="wbInput" name="topic">
-                <option>Partnership</option>
+  <!-- Main content -->
+  <section class="wbSection">
+    <div class="wbWrap">
+
+      <!-- Get involved -->
+      <div class="contactGrid">
+        <article class="contactPanel">
+          <h2 class="contactH2">Get Involved</h2>
+          <p class="contactP">Support the Mission</p>
+          <ul class="contactList">
+            <li>Become a development or funding partner</li>
+            <li>Sponsor a community or youth programme</li>
+            <li>Volunteer, mentor, or provide technical expertise</li>
+            <li>Donate financial or material resources</li>
+          </ul>
+
+          <div class="contactCallout">
+            <h3 class="contactH3">Investor Engagement</h3>
+            <p class="contactP">
+              Investors and partners are invited to collaborate in building sustainable social and economic transformation
+              within the Zambezi Region through structured, transparent, and high-impact initiatives.
+            </p>
+          </div>
+        </article>
+
+        <!-- Form -->
+        <article class="contactPanel contactPanel--form">
+          <h2 class="contactH2">Send a message</h2>
+          <p class="contactSmall">We’ll route your message to the right team.</p>
+
+          <form class="contactForm" id="contactForm">
+            <div class="contactForm__row2">
+              <label class="contactLabel">
+                Full name
+                <input class="contactInput" name="name" placeholder="Full name" required />
+              </label>
+
+              <label class="contactLabel">
+                Email address
+                <input class="contactInput" name="email" placeholder="Email address" type="email" required />
+              </label>
+            </div>
+
+            <label class="contactLabel">
+              Topic
+              <select class="contactInput" name="topic">
+                <option>Partnerships & Investment</option>
                 <option>Programmes</option>
-                <option>Donations</option>
+                <option>Donations & Support</option>
                 <option>Media / News</option>
                 <option>Other</option>
               </select>
-              <textarea class="wbInput wbTextarea" name="message" placeholder="Your message..." required></textarea>
-              <button class="wbBtn" type="submit">Submit</button>
-              <small class="wbFine" id="contactStatus"></small>
-            </form>
-          </article>
-        </div>
+            </label>
+
+            <label class="contactLabel">
+              Message
+              <textarea class="contactInput contactTextarea" name="message" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <button class="contactBtn" type="submit">Submit message</button>
+            <small class="contactStatus" id="contactStatus" aria-live="polite"></small>
+          </form>
+        </article>
       </div>
-    </section>
-  </main>
+
+      <!-- Official emails section -->
+      <div class="contactChannels">
+        <h2 class="contactH2">Official Contact Channels</h2>
+        <div class="contactChannels__grid">
+
+          <a class="channelCard" href="mailto:info@dkfoundation.org">
+            <div class="channelCard__label">General Enquiries</div>
+            <div class="channelCard__value">info@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:partnerships@dkfoundation.org">
+            <div class="channelCard__label">Partnerships and Investment</div>
+            <div class="channelCard__value">partnerships@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:support@dkfoundation.org">
+            <div class="channelCard__label">Donations and Support</div>
+            <div class="channelCard__value">support@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:admin@dkfoundation.org">
+            <div class="channelCard__label">Governance and Administration</div>
+            <div class="channelCard__value">admin@dkfoundation.org</div>
+          </a>
+
+        </div>
+
+        
+      </div>
+
+    </div>
+  </section>
+</main>
+
 
   <footer class="proFooter" role="contentinfo">
   <div class="proFooter__inner">
