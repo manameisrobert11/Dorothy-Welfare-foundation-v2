@@ -2680,3 +2680,19 @@ input, select, textarea, button{ max-width:100%; }
 .menuBtn__lines{
   flex: 0 0 22px;
 }
+/* Hide hamburger on desktop */
+.menuBtn{
+  display: none;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 860px){
+  .menuBtn{
+    display: inline-flex;
+  }
+
+  /* Hide desktop pill navigation on mobile */
+  .pillnav{
+    display: none;
+  }
+}
