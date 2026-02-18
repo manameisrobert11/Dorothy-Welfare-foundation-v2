@@ -87,3 +87,64 @@ document.querySelectorAll(".mnav__link").forEach((a) => {
   const href = (a.getAttribute("href") || "").split("/").pop()?.toLowerCase();
   if (href === here) a.classList.add("is-active");
 });
+// =========================
+// NEWS: modal + filter/search
+// =========================
+(function(){
+  const modal = document.getElementById("newsModal");
+  if(!modal) return;
+
+  const closeBtn = document.getElementById("newsModalClose");
+  const media = document.getElementById("newsModalMedia");
+  const title = document.getElementById("newsModalTitle");
+  const text = document.getElementById("newsModalText");
+  const tag = document.getElementById("newsModalTag");
+  const date = document.getElementById("newsModalDate");
+
+  // Open modal on "Read more"
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".newsCard__btn");
+    if(!btn) return;
+
+    title.textContent = btn.dataset.title || "Update";
+    text.textContent = btn.dataset.content || "";
+    tag.textContent = btn.dataset.category || "Update";
+    date.textContent = btn.dataset.date || "";
+    media.style.backgroundImage = `url('${btn.dataset.image || ""}')`;
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("noScroll");
+  });
+
+  function closeModal(){
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("noScroll");
+  }
+
+  closeBtn?.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => { if(e.target === modal) closeModal(); });
+  document.addEventListener("keydown", (e) => { if(e.key === "Escape") closeModal(); });
+
+  // Filter + search
+  const grid = document.getElementById("newsGrid");
+  const search = document.getElementById("newsSearch");
+  const filter = document.getElementById("newsFilter");
+  if(!grid) return;
+
+  function applyFilters(){
+    const q = (search?.value || "").toLowerCase().trim();
+    const cat = filter?.value || "all";
+
+    [...grid.querySelectorAll(".newsCard")].forEach(card => {
+      const matchesCat = (cat === "all") || (card.dataset.category === cat);
+      const hay = card.innerText.toLowerCase();
+      const matchesQ = !q || hay.includes(q);
+      card.style.display = (matchesCat && matchesQ) ? "" : "none";
+    });
+  }
+
+  search?.addEventListener("input", applyFilters);
+  filter?.addEventListener("change", applyFilters);
+})();
