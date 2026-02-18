@@ -15,6 +15,7 @@
         <span class="menuBtn__lines" aria-hidden="true"></span>
       </button>
 <nav class="pillnav" aria-label="Primary navigation">
+  <a class="pillnav__pill" href="./index.html">Home</a>
       <a class="pillnav__pill" href="./about.html">About</a>
       <a class="pillnav__pill" href="./programmes.html">Programmes</a>
       <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
@@ -57,33 +58,148 @@
   </div>
 
   <main class="page">
-    <section class="pageHero pageHero--news">
-      <div class="pageHero__inner">
-        <p class="pageHero__kicker">News</p>
-        <h1 class="pageHero__title">Updates, announcements, and community stories.</h1>
-        <p class="pageHero__lead">A dynamic platform for milestones, success stories, and upcoming activities.</p>
+  <!-- Hero -->
+  <section class="newsHero">
+    <div class="newsHero__inner">
+      <p class="newsHero__kicker">News</p>
+      <h1 class="newsHero__title">News, Events, and Community Stories</h1>
+      <p class="newsHero__lead">
+        A dynamic platform featuring foundation announcements, community success stories, upcoming programmes and events,
+        and partner highlights.
+      </p>
+
+      <div class="newsHero__bar">
+        <input class="newsHero__search" id="newsSearch" type="search" placeholder="Search updates…" />
+        <select class="newsHero__filter" id="newsFilter" aria-label="Filter news">
+          <option value="all">All</option>
+          <option value="announcements">Announcements</option>
+          <option value="stories">Community Stories</option>
+          <option value="events">Events</option>
+          <option value="partners">Partner Highlights</option>
+        </select>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="wbSection">
-      <div class="wbWrap">
-        <div class="newsLayout">
-          <article class="newsFeatured">
-            <h2>Featured Update</h2>
-            <p class="meta">Placeholder • Date</p>
-            <p>Use this space for your most important story (press release, outreach, event recap).</p>
-            <a class="wbLink" href="./contact.html">Request media information</a>
-          </article>
+  <!-- Cards -->
+  <section class="wbSection">
+    <div class="wbWrap">
+      <div class="newsCards" id="newsGrid">
 
-          <div class="newsList">
-            <a class="newsItem" href="#"><span class="meta">Announcement</span><strong>Foundation Announcement</strong><p>Milestones, outreach updates, and key notices.</p></a>
-            <a class="newsItem" href="#"><span class="meta">Story</span><strong>Community Success Story</strong><p>Testimonials and stories showcasing real impact.</p></a>
-            <a class="newsItem" href="#"><span class="meta">Event</span><strong>Upcoming Programme & Event</strong><p>Calendar items and upcoming community activities.</p></a>
+        <!-- CARD 1 -->
+        <article class="newsCard" data-category="announcements">
+          <div class="newsCard__media" style="background-image:url('./assets/news-1.webp');"></div>
+          <div class="newsCard__body">
+            <div class="newsCard__meta">
+              <span class="newsTag">Announcement</span>
+              <span class="newsDate">Feb 2026</span>
+            </div>
+            <h3 class="newsCard__title">Foundation announcements and milestones</h3>
+            <p class="newsCard__excerpt">
+              Strengthening outreach and programme delivery across the Zambezi Region through new community coordination.
+            </p>
+            <button class="newsCard__btn" type="button"
+              data-title="Foundation milestone: community engagement expansion"
+              data-category="Announcement"
+              data-date="Feb 2026"
+              data-image="./assets/news-1.jpg"
+              data-content="We are expanding structured community engagement to improve programme reach, feedback loops, and reporting. This includes strengthened local coordination, clearer referral pathways, and community-led planning to support sustainable impact across the Zambezi Region.">
+              Read more
+            </button>
           </div>
-        </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="newsCard" data-category="stories">
+          <div class="newsCard__media" style="background-image:url('./assets/news-2.jpg');"></div>
+          <div class="newsCard__body">
+            <div class="newsCard__meta">
+              <span class="newsTag newsTag--mint">Community Stories </span>
+              <span class="newsDate">Feb 2026</span>
+            </div>
+            <h3 class="newsCard__title">Community success story: youth skills and mentorship</h3>
+            <p class="newsCard__excerpt">
+              Early outcomes from mentorship and skills support focused on employability and enterprise readiness.
+            </p>
+            <button class="newsCard__btn" type="button"
+              data-title="Community success story: youth skills and mentorship"
+              data-category="Community Story"
+              data-date="Feb 2026"
+              data-image="./assets/news-2.jpg"
+              data-content="Our youth development approach combines mentorship, practical skills support, and leadership opportunities. Community mentors and programme partners help young people build confidence, increase employability, and explore entrepreneurship pathways.">
+              Read more
+            </button>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="newsCard" data-category="events">
+          <div class="newsCard__media" style="background-image:url('./assets/news-3.jpg');"></div>
+          <div class="newsCard__body">
+            <div class="newsCard__meta">
+              <span class="newsTag newsTag--dark">Event</span>
+              <span class="newsDate">Mar 2026</span>
+            </div>
+            <h3 class="newsCard__title">Upcoming programmes, outreach activities and programme events</h3>
+            <p class="newsCard__excerpt">
+              Community briefings and outreach sessions to support participation and transparent programme communication.
+            </p>
+            <button class="newsCard__btn" type="button"
+              data-title="Upcoming outreach activities and programme briefings"
+              data-category="Event"
+              data-date="Mar 2026"
+              data-image="./assets/news-3.jpg"
+              data-content="We will host outreach sessions and community briefings to share programme plans, participation pathways, and feedback channels. Dates and locations will be announced as schedules are confirmed with local partners.">
+              Read more
+            </button>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="newsCard" data-category="partners">
+          <div class="newsCard__media" style="background-image:url('./assets/news-4.jpg');"></div>
+          <div class="newsCard__body">
+            <div class="newsCard__meta">
+              <span class="newsTag newsTag--blue">Partner Highlights</span>
+              <span class="newsDate">Feb 2026</span>
+            </div>
+            <h3 class="newsCard__title">Partner Highlights and collaboration updates </h3>
+            <p class="newsCard__excerpt">
+              Strengthening transparency with partner-aligned indicators and measurable programme performance.
+            </p>
+            <button class="newsCard__btn" type="button"
+              data-title="Partner collaboration update: shared reporting & outcomes"
+              data-category="Partner Highlight"
+              data-date="Mar 2026"
+              data-image="./assets/news-4.jpg"
+              data-content="We align with partners on shared indicators, implementation milestones, and reporting structures. This supports transparent governance and continuous improvement while demonstrating measurable community impact.">
+              Read more
+            </button>
+          </div>
+        </article>
+
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="newsModal" id="newsModal" aria-hidden="true">
+    <div class="newsModal__panel" role="dialog" aria-modal="true" aria-label="News details">
+      <button class="newsModal__close" id="newsModalClose" type="button" aria-label="Close">×</button>
+      <div class="newsModal__media" id="newsModalMedia"></div>
+      <div class="newsModal__content">
+        <div class="newsModal__meta">
+          <span class="newsTag" id="newsModalTag">Update</span>
+          <span class="newsDate" id="newsModalDate">—</span>
+        </div>
+        <h2 class="newsModal__title" id="newsModalTitle">—</h2>
+        <p class="newsModal__text" id="newsModalText">—</p>
+        <a class="newsModal__cta" href="./contact.html">Contact us about this update</a>
+      </div>
+    </div>
+  </div>
+</main>
+
 
  <footer class="proFooter" role="contentinfo">
   <div class="proFooter__inner">
