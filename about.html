@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dorothy Kabula Welfare Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
+
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuBtn__label">Menu</span>
+        <span class="menuBtn__lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="pillnav" aria-label="Primary navigation">
+        <a class="pillnav__pill" href="./index.html">Home</a>
+        <a class="pillnav__pill" href="./about.html">About</a>
+        <a class="pillnav__pill" href="./programmes.html">Programmes</a>
+        <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
+        <a class="pillnav__pill" href="./impact.html">Impact</a>
+        <a class="pillnav__pill" href="./news.html">News</a>
+        <a class="pillnav__pill" href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="topbar__search" role="search">
+        <input class="topbar__searchInput" id="siteSearch" type="search" placeholder="Search programmes, updates..." aria-label="Search the site" />
+        <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mnav" id="mobileMenu" aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mnav__top">
+        <span class="mnav__brand">Dorothy Kabula Welfare Foundation</span>
+        <button class="mnav__close" id="menuClose" type="button" aria-label="Close menu">x</button>
+      </div>
+
+      <nav class="mnav__links" aria-label="Mobile navigation">
+        <a class="mnav__link" href="./index.html">Home</a>
+        <a class="mnav__link" href="./about.html">About</a>
+        <a class="mnav__link" href="./programmes.html">Programmes</a>
+        <a class="mnav__link" href="./partnerships.html">Partnerships</a>
+        <a class="mnav__link" href="./impact.html">Impact</a>
+        <a class="mnav__link" href="./news.html">News</a>
+        <a class="mnav__link" href="./contact.html">Contact</a>
+        <a class="mnav__link" href="./donate.html">Donate</a>
+      </nav>
+
+      <div class="mnav__search" role="search" aria-label="Search the site">
+        <span class="mnav__searchIcon" aria-hidden="true">Search</span>
+        <input class="mnav__searchInput" id="siteSearchMobile" type="search" placeholder="Search programmes, updates..." />
+        <button class="mnav__searchBtn" id="siteSearchBtnMobile" type="button" aria-label="Search">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="page page--about">
+    <section class="aboutHero" style="--aboutHero: url('./assets/about-hero.png');">
+      <div class="aboutHero__overlay"></div>
+      <div class="aboutHero__inner">
+        <p class="aboutHero__kicker">About</p>
+        <h1 class="aboutHero__title">A Foundation built on unity, dignity, and opportunity.</h1>
+        <p class="aboutHero__lead">
+          A Namibian non-profit organisation advancing welfare, enterprise, agriculture, youth and women empowerment, and accountable partnerships across the Zambezi Region.
+        </p>
+        <div class="aboutHero__actions">
+          <a class="aboutHero__btn" href="./partnerships.html">Partner with us</a>
+          <a class="aboutHero__btn aboutHero__btn--ghost" href="./donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutIntro">
+      <div class="aboutIntro__inner">
+        <p class="aboutIntro__kicker">Who we are</p>
+        <h2 class="aboutIntro__title">A community-centred foundation built for practical, measurable development.</h2>
+        <p class="aboutIntro__lead">
+          The Dorothy Kabula Welfare Foundation brings together communities, public institutions, donors, investors, and development partners to support inclusive social and economic progress in the Zambezi Region.
+        </p>
+
+        <div class="aboutIntro__grid">
+          <article>
+            <strong>Regional Focus</strong>
+            <span>Zambezi Region, Republic of Namibia</span>
+          </article>
+          <article>
+            <strong>Development Approach</strong>
+            <span>Partnership-led programmes with transparent delivery</span>
+          </article>
+          <article>
+            <strong>Core Commitment</strong>
+            <span>Unity, dignity, opportunity, and accountability</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutFounder">
+      <div class="aboutFounder__wrap">
+        <div class="aboutFounder__grid">
+          <div class="aboutFounder__imageWrap">
+            <img src="./assets/founder-dorothy-kabula.jpg" alt="Hon. Dorothy Mareka Kabula" class="aboutFounder__image" />
+          </div>
+
+          <div class="aboutFounder__content">
+            <p class="aboutFounder__kicker">Leadership</p>
+            <h2 class="aboutFounder__name">Hon. Dorothy Mareka Kabula</h2>
+            <p class="aboutFounder__role">Founder and Chairperson</p>
+            <p class="aboutFounder__text">
+              Founder and Chairperson of the Foundation and the first female Governor of the Zambezi Region. Her leadership reflects a lifelong commitment to community upliftment, gender equality, youth empowerment, and inclusive economic participation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutGovernance">
+      <div class="aboutGovernance__inner">
+        <p class="aboutGovernance__kicker">Governance</p>
+        <h2 class="aboutGovernance__title">Transparent leadership and accountable oversight.</h2>
+
+        <div class="aboutGovernance__grid">
+          <div class="aboutGovernance__block">
+            <h3 class="aboutGovernance__heading">Board of Directors</h3>
+            <ul class="aboutGovernance__list">
+              <li>Dr. Cedric Mwanota Limbo</li>
+              <li>Mr. Richwell Lukonga</li>
+              <li>Mr. Shakwa Nyambe</li>
+            </ul>
+          </div>
+
+          <div class="aboutGovernance__block">
+            <h3 class="aboutGovernance__heading">Foundation Members</h3>
+            <ul class="aboutGovernance__list">
+              <li>Ms. Matakala Clarina Likokoto</li>
+              <li>Mr. Godwin Mubusis Lemu</li>
+              <li>Ms. Priscaha Namasiku Makabi</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="aboutGovernance__note">
+          The Foundation upholds transparency, responsible stewardship, and accountability in managing programmes, partnerships, and resources.
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutPurpose">
+      <div class="aboutPurpose__inner">
+        <div class="aboutPurpose__copy">
+          <p class="aboutPurpose__kicker">Purpose</p>
+          <h2>Advancing unity, dignity, and sustainable socio-economic development.</h2>
+          <p>
+            The Foundation was established as a collaborative platform for mobilising communities, government institutions, the private sector, investors, and development partners toward inclusive regional growth and long-term social impact.
+          </p>
+        </div>
+
+        <div class="aboutPurpose__cards">
+          <article>
+            <span>Vision</span>
+            <strong>A united, empowered, and economically thriving Zambezi Region.</strong>
+          </article>
+          <article>
+            <span>Mission</span>
+            <strong>Mobilise partnerships and resources that improve welfare, enterprise, agriculture, and cultural heritage.</strong>
+          </article>
+          <article>
+            <span>Values</span>
+            <strong>Unity, integrity, sustainability, collaboration, and respect.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="aboutCompliance">
+      <div class="aboutCompliance__inner">
+        <article class="aboutCompliance__panel">
+          <p>Legal Status</p>
+          <h2>Registered non-profit association</h2>
+          <span>Non-Profit Making Association incorporated under Section 21 and registered in accordance with the laws and governance framework of Namibia.</span>
+        </article>
+        <article class="aboutCompliance__panel aboutCompliance__panel--dark">
+          <p>Accountability</p>
+          <h2>Built for responsible partnership</h2>
+          <span>Programme delivery is guided by governance oversight, partnership alignment, and a commitment to measurable community benefit.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="wbSection aboutTint">
+      <div class="wbWrap">
+        <h2 class="aboutH2Lg">The Foundation at a glance</h2>
+        <div class="aboutNumbers">
+          <div class="aboutStat">
+            <div class="aboutStat__num">1</div>
+            <div class="aboutStat__label">Region focus: Zambezi</div>
+          </div>
+          <div class="aboutStat">
+            <div class="aboutStat__num">5</div>
+            <div class="aboutStat__label">Core programme pillars</div>
+          </div>
+          <div class="aboutStat">
+            <div class="aboutStat__num">2</div>
+            <div class="aboutStat__label">Governance bodies</div>
+          </div>
+          <div class="aboutStat">
+            <div class="aboutStat__num">4</div>
+            <div class="aboutStat__label">Partnership pathways</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="proFooter" role="contentinfo">
+    <div class="proFooter__inner">
+      <div class="proFooter__top">
+        <div class="proFooter__brandCol">
+          <img src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" class="proFooter__logo" />
+          <p class="proFooter__mission">
+            Uniting the Zambezi Region for Inclusive Social and Economic Development.
+          </p>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="./about.html">Our Mission</a></li>
+            <li><a href="./impact.html">Impact</a></li>
+            <li><a href="./news.html">News</a></li>
+          </ul>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>Programmes</h4>
+          <ul>
+            <li><a href="./programmes.html">Youth & Women</a></li>
+            <li><a href="./programmes.html">Agriculture</a></li>
+            <li><a href="./programmes.html">Community Welfare</a></li>
+          </ul>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>Engage</h4>
+          <ul>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./partnerships.html">Partner With Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proFooter__divider"></div>
+
+      <div class="proFooter__bottom">
+        <div class="proFooter__legalLinks">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Governance</a>
+        </div>
+
+        <small>
+          &copy; <span id="year"></span> Dorothy Kabula Welfare Foundation. All rights reserved.
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./site.js"></script>
+</body>
+</html>

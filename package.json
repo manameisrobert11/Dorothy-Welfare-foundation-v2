@@ -1,0 +1,14 @@
+{
+  "name": "dorothy-welfare-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dorothy Kabula Welfare Foundation website and backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

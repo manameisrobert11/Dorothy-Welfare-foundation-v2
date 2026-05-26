@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dorothy Kabula Welfare Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- HEADER (same) -->
+  <header class="topbar"><div class="topbar__inner">
+    <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
+    
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuBtn__lines" aria-hidden="true"></span>
+      </button>
+<nav class="pillnav" aria-label="Primary navigation">
+  <a class="pillnav__pill" href="./index.html">Home</a>
+      <a class="pillnav__pill" href="./about.html">About</a>
+      <a class="pillnav__pill" href="./programmes.html">Programmes</a>
+      <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
+      <a class="pillnav__pill" href="./impact.html">Impact</a>
+      <a class="pillnav__pill" href="./news.html">News</a>
+      <a class="pillnav__pill" href="./contact.html">Contact</a>
+    </nav>
+    <div class="topbar__search" role="search">
+      <input class="topbar__searchInput" id="siteSearch" type="search" placeholder="Search programmes, updates…" aria-label="Search the site" />
+      <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search"></button>
+    </div>
+  </div></header>
+
+  <!-- MOBILE MENU (UNICEF-style drawer) -->
+  <div class="mnav" id="mobileMenu" aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mnav__top">
+        <span class="mnav__brand">Dorothy Kabula Welfare Foundation</span>
+        <button class="mnav__close" id="menuClose" type="button" aria-label="Close menu">×</button>
+      </div>
+
+      <nav class="mnav__links" aria-label="Mobile navigation">
+      <a class="mnav__link" href="./index.html">Home</a>
+      <a class="mnav__link" href="./about.html">About</a>
+      <a class="mnav__link" href="./programmes.html">Programmes</a>
+      <a class="mnav__link" href="./partnerships.html">Partnerships</a>
+      <a class="mnav__link" href="./impact.html">Impact</a>
+      <a class="mnav__link" href="./news.html">News</a>
+      <a class="mnav__link" href="./contact.html">Contact</a>
+      <a class="mnav__link" href="./donate.html">Donate</a>
+      </nav>
+
+      <div class="mnav__search" role="search" aria-label="Search the site">
+        <span class="mnav__searchIcon" aria-hidden="true">⌕</span>
+        <input class="mnav__searchInput" id="siteSearchMobile" type="search" placeholder="Search programmes, updates…" />
+        <button class="mnav__searchBtn" id="siteSearchBtnMobile" type="button" aria-label="Search">→</button>
+      </div>
+    </div>
+  </div>
+<main class="page">
+  <!-- Hero (more professional + not repetitive) -->
+  <section class="contactHero">
+    <div class="contactHero__inner">
+      <div class="contactHero__left">
+        <p class="contactHero__kicker">Contact</p>
+        <h1 class="contactHero__title">Let’s work together for measurable community impact.</h1>
+        <p class="contactHero__lead">
+          Dorothy Kabula Welfare Foundation — Zambezi Region, Republic of Namibia.
+          Reach our official channels or send a message directly.
+        </p>
+
+        <div class="contactHero__chips">
+          <a class="contactChip" href="mailto:info@dkfoundation.org">General Enquiries</a>
+          <a class="contactChip" href="mailto:partnerships@dkfoundation.org">Partnerships</a>
+          <a class="contactChip" href="mailto:support@dkfoundation.org">Donations</a>
+          <a class="contactChip" href="mailto:admin@dkfoundation.org">Administration</a>
+        </div>
+      </div>
+
+      <div class="contactHero__right" aria-hidden="true">
+        <div class="contactHero__card">
+          <div class="contactHero__cardTitle">Official Contact Channels</div>
+          <div class="contactHero__cardRow"><strong>Location</strong><span>Zambezi Region, Republic of Namibia</span></div>
+          <div class="contactHero__cardRow"><strong>Email</strong><span>info@dkfoundation.org</span></div>
+          <div class="contactHero__cardHint">We respond as quickly as possible. Thank you for supporting our work.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="wbSection">
+    <div class="wbWrap">
+
+      <!-- Get involved -->
+      <div class="contactGrid">
+        <article class="contactPanel">
+          <h2 class="contactH2">Get Involved</h2>
+          <p class="contactP">Support the Mission</p>
+          <ul class="contactList">
+            <li>Become a development or funding partner</li>
+            <li>Sponsor a community or youth programme</li>
+            <li>Volunteer, mentor, or provide technical expertise</li>
+            <li>Donate financial or material resources</li>
+          </ul>
+
+          <div class="contactCallout">
+            <h3 class="contactH3">Investor Engagement</h3>
+            <p class="contactP">
+              Investors and partners are invited to collaborate in building sustainable social and economic transformation
+              within the Zambezi Region through structured, transparent, and high-impact initiatives.
+            </p>
+          </div>
+        </article>
+
+        <!-- Form -->
+        <article class="contactPanel contactPanel--form">
+          <h2 class="contactH2">Send a message</h2>
+          <p class="contactSmall">We’ll route your message to the right team.</p>
+
+          <form class="contactForm" id="contactForm">
+            <div class="contactForm__row2">
+              <label class="contactLabel">
+                Full name
+                <input class="contactInput" name="name" placeholder="Full name" required />
+              </label>
+
+              <label class="contactLabel">
+                Email address
+                <input class="contactInput" name="email" placeholder="Email address" type="email" required />
+              </label>
+            </div>
+
+            <label class="contactLabel">
+              Topic
+              <select class="contactInput" name="topic">
+                <option>Partnerships & Investment</option>
+                <option>Programmes</option>
+                <option>Donations & Support</option>
+                <option>Media / News</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label class="contactLabel">
+              Message
+              <textarea class="contactInput contactTextarea" name="message" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <button class="contactBtn" type="submit">Submit message</button>
+            <small class="contactStatus" id="contactStatus" aria-live="polite"></small>
+          </form>
+        </article>
+      </div>
+
+      <!-- Official emails section -->
+      <div class="contactChannels">
+        <h2 class="contactH2">Official Contact Channels</h2>
+        <div class="contactChannels__grid">
+
+          <a class="channelCard" href="mailto:info@dkfoundation.org">
+            <div class="channelCard__label">General Enquiries</div>
+            <div class="channelCard__value">info@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:partnerships@dkfoundation.org">
+            <div class="channelCard__label">Partnerships and Investment</div>
+            <div class="channelCard__value">partnerships@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:support@dkfoundation.org">
+            <div class="channelCard__label">Donations and Support</div>
+            <div class="channelCard__value">support@dkfoundation.org</div>
+          </a>
+
+          <a class="channelCard" href="mailto:admin@dkfoundation.org">
+            <div class="channelCard__label">Governance and Administration</div>
+            <div class="channelCard__value">admin@dkfoundation.org</div>
+          </a>
+
+        </div>
+
+        
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+  <footer class="proFooter" role="contentinfo">
+  <div class="proFooter__inner">
+
+    <div class="proFooter__top">
+
+      <!-- Brand Column -->
+      <div class="proFooter__brandCol">
+        <img src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" class="proFooter__logo" />
+        <p class="proFooter__mission">
+          Uniting the Zambezi Region for Inclusive Social and Economic Development.
+        </p>
+      </div>
+
+      <!-- Links Column -->
+      <div class="proFooter__col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="./about.html">Our Mission</a></li>
+          <li><a href="./impact.html">Impact</a></li>
+          <li><a href="./news.html">News</a></li>
+        </ul>
+      </div>
+
+      <div class="proFooter__col">
+        <h4>Programmes</h4>
+        <ul>
+          <li><a href="./programmes.html">Youth & Women</a></li>
+          <li><a href="./programmes.html">Agriculture</a></li>
+          <li><a href="./programmes.html">Community Welfare</a></li>
+        </ul>
+      </div>
+
+      <div class="proFooter__col">
+        <h4>Engage</h4>
+        <ul>
+          <li><a href="./donate.html">Donate</a></li>
+          <li><a href="./partnerships.html">Partner With Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="proFooter__divider"></div>
+
+    <div class="proFooter__bottom">
+      <div class="proFooter__legalLinks">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Governance</a>
+      </div>
+
+      <small>
+        © <span id="year"></span> Dorothy Kabula Welfare Foundation. All rights reserved.
+      </small>
+    </div>
+
+  </div>
+</footer>
+
+
+  <script src="./site.js"></script>
+  <script>
+    const cf = document.getElementById("contactForm");
+    const cs = document.getElementById("contactStatus");
+    cf?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (cs) cs.textContent = "Sending...";
+
+      const data = Object.fromEntries(new FormData(cf).entries());
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || "Could not send message.");
+
+        if (cs) cs.textContent = result.message || "Thank you. Your message has been received.";
+        cf.reset();
+      } catch (error) {
+        if (cs) cs.textContent = error.message || "Could not send message. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

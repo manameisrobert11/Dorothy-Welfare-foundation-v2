@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Dorothy Kabula Welfare Foundation</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <img class="topbar__logo" src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" />
+
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuBtn__label">Menu</span>
+        <span class="menuBtn__lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="pillnav" aria-label="Primary navigation">
+        <a class="pillnav__pill" href="./index.html">Home</a>
+        <a class="pillnav__pill" href="./about.html">About</a>
+        <a class="pillnav__pill" href="./programmes.html">Programmes</a>
+        <a class="pillnav__pill" href="./partnerships.html">Partnerships</a>
+        <a class="pillnav__pill" href="./impact.html">Impact</a>
+        <a class="pillnav__pill" href="./news.html">News</a>
+        <a class="pillnav__pill" href="./contact.html">Contact</a>
+        <a class="pillnav__pill is-active" href="./donate.html" aria-current="page">Donate</a>
+      </nav>
+
+      <div class="topbar__search" role="search">
+        <input class="topbar__searchInput" id="siteSearch" type="search" placeholder="Search programmes, updates..." aria-label="Search the site" />
+        <button class="topbar__searchBtn" id="siteSearchBtn" type="button" aria-label="Search"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mnav" id="mobileMenu" aria-hidden="true">
+    <div class="mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mnav__top">
+        <span class="mnav__brand">Dorothy Kabula Welfare Foundation</span>
+        <button class="mnav__close" id="menuClose" type="button" aria-label="Close menu">x</button>
+      </div>
+
+      <nav class="mnav__links" aria-label="Mobile navigation">
+        <a class="mnav__link" href="./index.html">Home</a>
+        <a class="mnav__link" href="./about.html">About</a>
+        <a class="mnav__link" href="./programmes.html">Programmes</a>
+        <a class="mnav__link" href="./partnerships.html">Partnerships</a>
+        <a class="mnav__link" href="./impact.html">Impact</a>
+        <a class="mnav__link" href="./news.html">News</a>
+        <a class="mnav__link" href="./contact.html">Contact</a>
+        <a class="mnav__link" href="./donate.html">Donate</a>
+      </nav>
+
+      <div class="mnav__search" role="search" aria-label="Search the site">
+        <span class="mnav__searchIcon" aria-hidden="true">Search</span>
+        <input class="mnav__searchInput" id="siteSearchMobile" type="search" placeholder="Search programmes, updates..." />
+        <button class="mnav__searchBtn" id="siteSearchBtnMobile" type="button" aria-label="Search">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="page page--donate">
+    <section class="donateHero">
+      <div class="donateHero__inner">
+        <div class="donateHero__copy">
+          <p class="donateHero__kicker">Donate</p>
+          <h1>Support programmes that strengthen communities.</h1>
+          <p>
+            Your once-off contribution helps advance welfare, youth and women empowerment, agriculture, enterprise, culture, and local development across the Zambezi Region.
+          </p>
+        </div>
+
+        <div class="donateHero__note">
+          <strong>Secure giving</strong>
+          <span>Donate online via PayToday when checkout is configured, or contact us for official banking and partnership options.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="donateFlow">
+      <div class="donateFlow__inner">
+        <form id="paytodayDonateForm" class="donatePanel" novalidate>
+          <div class="donatePanel__head">
+            <p>Once-off donation</p>
+            <h2>Choose an amount</h2>
+          </div>
+
+          <div class="donateAmounts" aria-label="Suggested donation amounts">
+            <button type="button" data-amount="100">NAD 100</button>
+            <button type="button" data-amount="200" class="is-selected">NAD 200</button>
+            <button type="button" data-amount="500">NAD 500</button>
+            <button type="button" data-amount="1000">NAD 1,000</button>
+          </div>
+
+          <label class="donateForm__label donateAmountField">
+            Amount (NAD)
+            <input class="donateForm__input" id="donAmount" type="number" min="10" step="1" value="200" required />
+          </label>
+
+          <div class="donateForm__row2">
+            <label class="donateForm__label">
+              First name
+              <input class="donateForm__input" id="donFirst" type="text" autocomplete="given-name" required />
+            </label>
+            <label class="donateForm__label">
+              Last name
+              <input class="donateForm__input" id="donLast" type="text" autocomplete="family-name" required />
+            </label>
+          </div>
+
+          <label class="donateForm__label">
+            Email
+            <input class="donateForm__input" id="donEmail" type="email" autocomplete="email" required />
+          </label>
+
+          <label class="donateForm__label">
+            Phone
+            <input class="donateForm__input" id="donPhone" type="tel" autocomplete="tel" required />
+          </label>
+
+          <button class="donateSubmit" id="donatePayTodayBtn" type="submit">Donate now</button>
+          <p class="donateForm__status" id="donateStatus" aria-live="polite"></p>
+          <p class="donateFineprint">Minimum donation is NAD 10. If online checkout is unavailable, please contact us and we will assist.</p>
+        </form>
+
+        <aside class="donateSupport">
+          <div class="donateSupport__card">
+            <h3>Other ways to support</h3>
+            <a href="./contact.html">Request banking details</a>
+            <a href="./partnerships.html">Discuss partnership funding</a>
+            <a href="./programmes.html">View programme areas</a>
+          </div>
+
+          <div class="donateSupport__impact">
+            <span>Giving focus</span>
+            <ul>
+              <li>Youth and women empowerment</li>
+              <li>Agriculture and enterprise development</li>
+              <li>Community welfare and local support</li>
+              <li>Culture, sport, and inclusive participation</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="proFooter" role="contentinfo">
+    <div class="proFooter__inner">
+      <div class="proFooter__top">
+        <div class="proFooter__brandCol">
+          <img src="./assets/logo.png" alt="Dorothy Kabula Welfare Foundation logo" class="proFooter__logo" />
+          <p class="proFooter__mission">
+            Uniting the Zambezi Region for Inclusive Social and Economic Development.
+          </p>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="./about.html">Our Mission</a></li>
+            <li><a href="./impact.html">Impact</a></li>
+            <li><a href="./news.html">News</a></li>
+          </ul>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>Programmes</h4>
+          <ul>
+            <li><a href="./programmes.html">Youth & Women</a></li>
+            <li><a href="./programmes.html">Agriculture</a></li>
+            <li><a href="./programmes.html">Community Welfare</a></li>
+          </ul>
+        </div>
+
+        <div class="proFooter__col">
+          <h4>Engage</h4>
+          <ul>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./partnerships.html">Partner With Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proFooter__divider"></div>
+
+      <div class="proFooter__bottom">
+        <div class="proFooter__legalLinks">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Governance</a>
+        </div>
+
+        <small>
+          &copy; <span id="year"></span> Dorothy Kabula Welfare Foundation. All rights reserved.
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./site.js"></script>
+  <script>
+    const form = document.getElementById("paytodayDonateForm");
+    const statusEl = document.getElementById("donateStatus");
+    const btn = document.getElementById("donatePayTodayBtn");
+    const amountInput = document.getElementById("donAmount");
+    const amountButtons = document.querySelectorAll(".donateAmounts button");
+
+    function setStatus(msg) { statusEl.textContent = msg || ""; }
+
+    amountButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        amountButtons.forEach((item) => item.classList.remove("is-selected"));
+        button.classList.add("is-selected");
+        amountInput.value = button.dataset.amount;
+      });
+    });
+
+    amountInput.addEventListener("input", () => {
+      amountButtons.forEach((button) => {
+        button.classList.toggle("is-selected", button.dataset.amount === amountInput.value);
+      });
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const amountNAD = Number(amountInput.value);
+      const first = document.getElementById("donFirst").value.trim();
+      const last = document.getElementById("donLast").value.trim();
+      const email = document.getElementById("donEmail").value.trim();
+      const phone = document.getElementById("donPhone").value.trim();
+
+      if (!amountNAD || amountNAD < 10 || !first || !last || !email || !phone) {
+        setStatus("Please complete all fields (minimum NAD 10).");
+        return;
+      }
+
+      btn.disabled = true;
+      setStatus("Starting secure checkout...");
+
+      try {
+        const response = await fetch("/api/donations/paytoday", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            amountNAD,
+            firstName: first,
+            lastName: last,
+            email,
+            phone
+          })
+        });
+
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || "Could not start PayToday checkout.");
+        window.location.href = result.paymentUrl;
+      } catch (err) {
+        console.error(err);
+        setStatus(err.message || "Could not start PayToday checkout. Please try again.");
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
